@@ -1,1 +1,1 @@
-web: gunicorn DSPROJECT.wsgi
+web: streamlit run app.py
