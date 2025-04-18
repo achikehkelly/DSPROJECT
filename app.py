@@ -3,14 +3,14 @@ import pandas as pd
 import plotly.express as px
 
 # Load dataset
-df = pd.read_csv(r'c:\Users\achik\OneDrive\Desktop\TRIPPLETEN\DS PROJECT\vehicles_us.csv')
+df = pd.read_csv('vehicles_us.csv')
 
 # Clean out extreme values
 df = df[(df['price'] > 1000) & (df['price'] < 100000) & 
         (df['odometer'] > 0) & (df['odometer'] < 300000)]
 
 # Header
-st.header("🚗 Vehicle Market Explorer")
+st.header(" Vehicle Market Explorer")
 
 # Checkbox for filtering electric vehicles
 show_electric = st.checkbox("Show only electric vehicles")
